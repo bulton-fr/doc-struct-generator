@@ -188,11 +188,12 @@ class ProjectParser
      * Read the class list, check namespace to know if the class should be
      * parsed or not, and run the parser if allowed.
      * 
-     * @return void
+     * @return string
      */
     public function run()
     {
         $classMap = $this->obtainClassList();
+        $output   = '';
         
         foreach ($classMap as $className => $classFilePath) {
             if ($this->isIgnoredNS($className) === true) {
@@ -208,8 +209,10 @@ class ProjectParser
             
             $parser->run();
             
-            echo $parser."\n\n";
+            $output .= $parser."\n\n";
         }
+        
+        return $output;
     }
     
     /**

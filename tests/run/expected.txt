@@ -55,6 +55,6 @@ bool public hasClasses(string $className)
 bool protected isIgnoredNS(string $className)
 void protected obtainClassList()
 void protected obtainComposerLoader()
-void public run()
+string public run()
 
 
