@@ -1,0 +1,35 @@
+{
+    "name": "bulton-fr/doc-struct-generator",
+    "type": "library",
+    "description": "Generate the structure of PHP classes. Can be used like help to write documentation.",
+    "keywords": [
+        "structure",
+        "php"
+    ],
+    "homepage": "https://github.com/bulton-fr/doc-struct-generator",
+    "time": "2018-08-17",
+    "license": "LGPL-3.0",
+    "authors": [
+        {
+            "name": "Vermeulen Maxime / Bulton",
+            "homepage": "http://www.bulton.fr",
+            "email": "bulton.fr@gmail.com"
+        }
+    ],
+    "support": {
+        "email": "support@bulton.fr",
+        "issues": "https://github.com/bulton-fr/doc-struct-generator/issues",
+        "source": "https://github.com/bulton-fr/doc-struct-generator"
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "phpdocumentor/reflection-docblock": "^5.0",
+        "phpdocumentor/type-resolver": "^0.6"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "bultonFr\\DocStructGenerator\\": "src"
+        }
+    }
+}
