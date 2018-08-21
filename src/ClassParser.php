@@ -320,7 +320,9 @@ class ClassParser
      */
     protected function parseTagMethod(Tag $tagInfos)
     {
-        $this->dynamicMethods[$tagInfos->methodName] = $tagInfos->__toString();
+        $methodName = $tagInfos->getMethodName();
+        
+        $this->dynamicMethods[$methodName] = $tagInfos->__toString();
     }
     
     /**
