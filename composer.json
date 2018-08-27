@@ -1,12 +1,12 @@
 {
-    "name": "bulton-fr/doc-struct-generator",
+    "name": "bulton-fr/methods-header-generator",
     "type": "library",
-    "description": "Generate the structure of PHP classes. Can be used like help to write documentation.",
+    "description": "Generate the header of all methods into a PHP classes.",
     "keywords": [
-        "structure",
+        "header",
         "php"
     ],
-    "homepage": "https://github.com/bulton-fr/doc-struct-generator",
+    "homepage": "https://github.com/bulton-fr/methods-header-generator",
     "time": "2018-08-17",
     "license": "LGPL-3.0",
     "authors": [
@@ -18,8 +18,8 @@
     ],
     "support": {
         "email": "support@bulton.fr",
-        "issues": "https://github.com/bulton-fr/doc-struct-generator/issues",
-        "source": "https://github.com/bulton-fr/doc-struct-generator"
+        "issues": "https://github.com/bulton-fr/methods-header-generator/issues",
+        "source": "https://github.com/bulton-fr/methods-header-generator"
     },
     "require": {
         "php": ">=5.4.0",
@@ -29,7 +29,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "bultonFr\\DocStructGenerator\\": "src"
+            "bultonFr\\MethodsHeaderGenerator\\": "src"
         }
     }
 }

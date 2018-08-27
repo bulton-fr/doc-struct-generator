@@ -4,7 +4,7 @@ require_once(__DIR__.'/../../vendor/autoload.php');
 
 $expected = file_get_contents(__DIR__.'/expected.txt');
 
-$project = new \bultonFr\DocStructGenerator\ProjectParser(
+$project = new \bultonFr\MethodsHeaderGenerator\ProjectParser(
     __DIR__.'/../../vendor',
     'bultonFr\\'
 );

@@ -1,32 +1,32 @@
-bultonFr\DocStructGenerator\ClassParser
-self public __construct(string $className, [\bultonFr\DocStructGenerator\ProjectParser|null $projectParser=null])
+bultonFr\MethodsHeaderGenerator\ClassParser
+self public __construct(string $className, [\bultonFr\MethodsHeaderGenerator\ProjectParser|null $projectParser=null])
 string public __toString()
 void protected analyseDocBlock()
 void protected analyseDocBlockTag(\phpDocumentor\Reflection\DocBlock\Tag $tagInfos)
 void protected analyseMethods()
 string public getClassName()
 \phpDocumentor\Reflection\DocBlock\Tags\Method[] public getDynamicMethods()
-\bultonFr\DocStructGenerator\MethodParser[] public getMethods()
-\bultonFr\DocStructGenerator\ProjectParser[] public getParserInterfaces()
-\bultonFr\DocStructGenerator\ClassParser|null public getParserParent()
-\bultonFr\DocStructGenerator\ProjectParser|null public getProjectParser()
+\bultonFr\MethodsHeaderGenerator\MethodParser[] public getMethods()
+\bultonFr\MethodsHeaderGenerator\ProjectParser[] public getParserInterfaces()
+\bultonFr\MethodsHeaderGenerator\ClassParser|null public getParserParent()
+\bultonFr\MethodsHeaderGenerator\ProjectParser|null public getProjectParser()
 \ReflectionClass public getReflection()
 \ReflectionClass|bool public getReflectionParent()
 int public getRunStatus()
 void protected instantiateInterfacesParser()
 void protected instantiateParentParser()
-\bultonFr\DocStructGenerator\ClassParser protected newParser(string $className)
+\bultonFr\MethodsHeaderGenerator\ClassParser protected newParser(string $className)
 string public obtainClassNameInfos()
 void protected parseTagMethod(\phpDocumentor\Reflection\DocBlock\Tag $tagInfos)
 void public run()
 
 
-bultonFr\DocStructGenerator\MethodParser
-self public __construct(\bultonFr\DocStructGenerator\ClassParser $classParser, \ReflectionMethod $method)
+bultonFr\MethodsHeaderGenerator\MethodParser
+self public __construct(\bultonFr\MethodsHeaderGenerator\ClassParser $classParser, \ReflectionMethod $method)
 string public __toString()
 void protected analyseTag(\phpDocumentor\Reflection\DocBlock\Tag $tagInfos)
 void protected checkReturnType()
-\bultonFr\DocStructGenerator\ClassParser public getClassParser()
+\bultonFr\MethodsHeaderGenerator\ClassParser public getClassParser()
 string public getName()
 \stdClass[] public getParams()
 \ReflectionMethod public getReflection()
@@ -42,11 +42,11 @@ void protected tagParam(\phpDocumentor\Reflection\DocBlock\Tag $tagInfos)
 void protected tagReturn(\phpDocumentor\Reflection\DocBlock\Tag $tagInfos)
 
 
-bultonFr\DocStructGenerator\ProjectParser
+bultonFr\MethodsHeaderGenerator\ProjectParser
 self public __construct(string $vendorDir, string[]|string $nsToParse, [string[]|string $nsToIgnore=array()])
-void public addToClasses(\bultonFr\DocStructGenerator\ClassParser $parser)
-\bultonFr\DocStructGenerator\ClassParser[] public getClasses()
-\bultonFr\DocStructGenerator\ClassParser public getClassesByName(string $className)
+void public addToClasses(\bultonFr\MethodsHeaderGenerator\ClassParser $parser)
+\bultonFr\MethodsHeaderGenerator\ClassParser[] public getClasses()
+\bultonFr\MethodsHeaderGenerator\ClassParser public getClassesByName(string $className)
 \Composer\Autoload\ClassLoader|null public getComposerLoader()
 string[] public getNsToIgnore()
 string[] public getNsToParse()

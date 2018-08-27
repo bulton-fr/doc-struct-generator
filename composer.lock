@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f34a122522c4409a5cf92de06bb57ea",
+    "content-hash": "3a0cb3270770743b4938d0549b449a36",
     "packages": [
         {
             "name": "phpdocumentor/reflection-common",

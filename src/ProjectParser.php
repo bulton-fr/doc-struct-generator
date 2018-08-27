@@ -1,6 +1,6 @@
 <?php
 
-namespace bultonFr\DocStructGenerator;
+namespace bultonFr\MethodsHeaderGenerator;
 
 /**
  * Usefull to improve performence when we parse a big project. All classes
@@ -23,7 +23,7 @@ class ProjectParser
     protected $composerLoader;
     
     /**
-     * @var \bultonFr\DocStructGenerator\ClassParser[] $classes All classes who
+     * @var \bultonFr\MethodsHeaderGenerator\ClassParser[] $classes All classes who
      * are already parsed
      */
     protected $classes = [];
@@ -89,7 +89,7 @@ class ProjectParser
     /**
      * Getter accessor to property classes
      * 
-     * @return \bultonFr\DocStructGenerator\ClassParser[]
+     * @return \bultonFr\MethodsHeaderGenerator\ClassParser[]
      */
     public function getClasses()
     {
@@ -133,7 +133,7 @@ class ProjectParser
      * 
      * @param string $className The class name for which obtain the ClassParser
      * 
-     * @return \bultonFr\DocStructGenerator\ClassParser
+     * @return \bultonFr\MethodsHeaderGenerator\ClassParser
      * 
      * @throws \Exception If the class not exist into the list
      */
@@ -149,7 +149,7 @@ class ProjectParser
     /**
      * Add a new class to the list
      * 
-     * @param \bultonFr\DocStructGenerator\ClassParser $parser The ClassParser
+     * @param \bultonFr\MethodsHeaderGenerator\ClassParser $parser The ClassParser
      * object to add
      * 
      * @return void
