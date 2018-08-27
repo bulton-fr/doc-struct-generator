@@ -1,6 +1,6 @@
 <?php
 
-namespace bultonFr\DocStructGenerator;
+namespace bultonFr\MethodsHeaderGenerator;
 
 use \phpDocumentor\Reflection\DocBlockFactory;
 use \phpDocumentor\Reflection\DocBlock\Tag;
@@ -11,7 +11,7 @@ use \phpDocumentor\Reflection\DocBlock\Tag;
 class MethodParser
 {
     /**
-     * @var \bultonFr\DocStructGenerator\ClassParser $classParser The class
+     * @var \bultonFr\MethodsHeaderGenerator\ClassParser $classParser The class
      * parser instance corresponding to the class where is the current method
      */
     protected $classParser;
@@ -47,7 +47,7 @@ class MethodParser
      * Construct
      * Populate properties and get all parameters from reflection system.
      * 
-     * @param \bultonFr\DocStructGenerator\ClassParser $classParser
+     * @param \bultonFr\MethodsHeaderGenerator\ClassParser $classParser
      * @param \ReflectionMethod $method
      */
     public function __construct(
@@ -66,7 +66,7 @@ class MethodParser
     /**
      * Getter accessor to property classParser
      * 
-     * @return \bultonFr\DocStructGenerator\ClassParser
+     * @return \bultonFr\MethodsHeaderGenerator\ClassParser
      */
     public function getClassParser()
     {
@@ -193,7 +193,7 @@ class MethodParser
             $paramInfos->name = $reflParamInfos->name;
         }
 
-        if ($paramInfos->optional === true) {
+        if ($paramInfos->optional === true && $paramInfos->variadic === false) {
             $paramInfos->defaultValue = $reflParamInfos->getDefaultValue();
         }
 

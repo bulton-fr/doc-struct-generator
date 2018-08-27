@@ -1,6 +1,6 @@
 <?php
 
-namespace bultonFr\DocStructGenerator;
+namespace bultonFr\MethodsHeaderGenerator;
 
 use \phpDocumentor\Reflection\DocBlockFactory;
 use \phpDocumentor\Reflection\DocBlock\Tag;
@@ -16,7 +16,7 @@ class ClassParser
     protected $className = '';
     
     /**
-     * @var \bultonFr\DocStructGenerator\ProjectParser|null $projectParser The
+     * @var \bultonFr\MethodsHeaderGenerator\ProjectParser|null $projectParser The
      * instance of the ProjectParser class who instanciate this class
      */
     protected $projectParser;
@@ -34,13 +34,13 @@ class ClassParser
     protected $reflectionParent;
     
     /**
-     * @var \bultonFr\DocStructGenerator\ClassParser|null $pârserParent The
+     * @var \bultonFr\MethodsHeaderGenerator\ClassParser|null $pârserParent The
      * parser instance of the parent class
      */
     protected $parserParent;
     
     /**
-     * @var \bultonFr\DocStructGenerator\ProjectParser[] $parserInterface 
+     * @var \bultonFr\MethodsHeaderGenerator\ProjectParser[] $parserInterface 
      * parsers instances for each interface implemented by the class
      */
     protected $parserInterfaces = [];
@@ -52,7 +52,7 @@ class ClassParser
     protected $dynamicMethods = [];
     
     /**
-     * @var \bultonFr\DocStructGenerator\MethodParser[] $methods All methods
+     * @var \bultonFr\MethodsHeaderGenerator\MethodParser[] $methods All methods
      * find into the class who are parsed.
      */
     protected $methods = [];
@@ -73,7 +73,7 @@ class ClassParser
      * ReflectionClass for parent class too.
      * 
      * @param string $className
-     * @param \bultonFr\DocStructGenerator\ProjectParser|null $projectParser
+     * @param \bultonFr\MethodsHeaderGenerator\ProjectParser|null $projectParser
      * The instance of ProjectParser If the class is instanciate from him,
      * else null.
      * It's used to improve performance (not re-parse a class)
@@ -100,7 +100,7 @@ class ClassParser
     /**
      * Getter accessor to property projectParser
      * 
-     * @return \bultonFr\DocStructGenerator\ProjectParser|null
+     * @return \bultonFr\MethodsHeaderGenerator\ProjectParser|null
      */
     public function getProjectParser()
     {
@@ -130,7 +130,7 @@ class ClassParser
     /**
      * Getter accessor to property parserParent
      * 
-     * @return \bultonFr\DocStructGenerator\ClassParser|null
+     * @return \bultonFr\MethodsHeaderGenerator\ClassParser|null
      */
     public function getParserParent()
     {
@@ -140,7 +140,7 @@ class ClassParser
     /**
      * Getter accessor to property parserInterfaces
      * 
-     * @return \bultonFr\DocStructGenerator\ProjectParser[]
+     * @return \bultonFr\MethodsHeaderGenerator\ProjectParser[]
      */
     public function getParserInterfaces()
     {
@@ -160,7 +160,7 @@ class ClassParser
     /**
      * Getter accessor to property methods
      * 
-     * @return \bultonFr\DocStructGenerator\MethodParser[]
+     * @return \bultonFr\MethodsHeaderGenerator\MethodParser[]
      */
     public function getMethods()
     {
@@ -280,7 +280,7 @@ class ClassParser
      * 
      * @param string $className The class name to parse
      * 
-     * @return \bultonFr\DocStructGenerator\ClassParser
+     * @return \bultonFr\MethodsHeaderGenerator\ClassParser
      */
     protected function newParser($className)
     {
