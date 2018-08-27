@@ -1,11 +1,11 @@
-# doc-struct-generator
+# methods-header-generator
 Generate methods struct for all classes of a project. Can be used like help to write documentation.
 
-[![Build Status](https://travis-ci.org/bulton-fr/doc-struct-generator.svg?branch=develop)](https://travis-ci.org/bulton-fr/doc-struct-generator) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bulton-fr/doc-struct-generator/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/bulton-fr/doc-struct-generator/?branch=develop) [![Latest Stable Version](https://poser.pugx.org/bulton-fr/doc-struct-generator/v/stable.svg)](https://packagist.org/packages/bulton-fr/doc-struct-generator) [![License](https://poser.pugx.org/bulton-fr/doc-struct-generator/license.svg)](https://packagist.org/packages/bulton-fr/doc-struct-generator)
+[![Build Status](https://travis-ci.org/bulton-fr/methods-header-generator.svg?branch=develop)](https://travis-ci.org/bulton-fr/methods-header-generator) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bulton-fr/methods-header-generator/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/bulton-fr/methods-header-generator/?branch=develop) [![Latest Stable Version](https://poser.pugx.org/bulton-fr/methods-header-generator/v/stable.svg)](https://packagist.org/packages/bulton-fr/methods-header-generator) [![License](https://poser.pugx.org/bulton-fr/methods-header-generator/license.svg)](https://packagist.org/packages/bulton-fr/methods-header-generator)
 
 # Install
 With composer
-`composer require bulton-fr/doc-struct-generator`
+`composer require bulton-fr/methods-header-generator`
 
 Because dependency `phpdocumentor/reflection-common` in `2.0.0-beta1`, you should have PHP >= 7.1
 
@@ -22,7 +22,7 @@ Exemple : `composer update -o`
 
 To use ProjectParser :
 ```php
-$project = new \bultonFr\DocStructGenerator\ProjectParser('myVendorPath', ['myNamespaceToInspect\\']);
+$project = new \bultonFr\MethodsHeaderGenerator\ProjectParser('myVendorPath', ['myNamespaceToInspect\\']);
 echo $project->run();
 ```
 The constructor take three parameters:
@@ -37,7 +37,7 @@ I create the file : `/docs/parser.php`
 
 $autoload = require_once(__DIR__.'/../vendor/autoload.php');
 
-$project = new \bultonFr\DocStructGenerator\ProjectParser(
+$project = new \bultonFr\MethodsHeaderGenerator\ProjectParser(
     __DIR__.'/../vendor',
     'BFW\\',
     'BFW\\Test\\'
@@ -51,18 +51,18 @@ Without ProjectParser, you will loop on all your classes manually. For each clas
 
 Exemple:
 ```php
-$parser = new \bultonFr\DocStructGenerator\ClassParser('myClass');
+$parser = new \bultonFr\MethodsHeaderGenerator\ClassParser('myClass');
 echo $parser->run();
 ```
 
 # What is returned ?
 If I use ClassParser on the class ProjectParser, it will return :
 ```
-bultonFr\DocStructGenerator\ProjectParser
+bultonFr\MethodsHeaderGenerator\ProjectParser
 self public __construct(string $vendorDir, string[]|string $nsToParse, [string[]|string $nsToIgnore=array()])
-void public addToClasses(\bultonFr\DocStructGenerator\ClassParser $parser)
-\bultonFr\DocStructGenerator\ClassParser[] public getClasses()
-\bultonFr\DocStructGenerator\ClassParser public getClassesByName(string $className)
+void public addToClasses(\bultonFr\MethodsHeaderGenerator\ClassParser $parser)
+\bultonFr\MethodsHeaderGenerator\ClassParser[] public getClasses()
+\bultonFr\MethodsHeaderGenerator\ClassParser public getClassesByName(string $className)
 \Composer\Autoload\ClassLoader|null public getComposerLoader()
 string[] public getNsToIgnore()
 string[] public getNsToParse()
