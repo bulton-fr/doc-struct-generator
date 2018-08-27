@@ -193,7 +193,7 @@ class MethodParser
             $paramInfos->name = $reflParamInfos->name;
         }
 
-        if ($paramInfos->optional === true) {
+        if ($paramInfos->optional === true && $paramInfos->variadic === false) {
             $paramInfos->defaultValue = $reflParamInfos->getDefaultValue();
         }
 
